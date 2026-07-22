@@ -1,0 +1,806 @@
+/* ---------- FIRST PAGE ---------- */
+
+body{
+
+background:#ffdce8;
+
+text-align:center;
+
+font-family:Georgia;
+
+}
+
+
+/* Heading */
+
+h1{
+
+color:#c94f7c;
+
+}
+
+
+/* Envelope */
+
+button{
+
+font-size:70px;
+
+border:none;
+
+background:none;
+
+cursor:pointer;
+
+}
+
+
+#envelope{
+
+transition:0.5s;
+
+animation:pulse 2s infinite;
+
+}
+
+
+#envelope:hover{
+
+transform:scale(1.2);
+
+}
+
+
+/* Envelope Glow */
+
+@keyframes pulse{
+
+
+0%{
+
+transform:scale(1);
+
+filter:drop-shadow(0 0 0px white);
+
+}
+
+
+50%{
+
+transform:scale(1.1);
+
+filter:drop-shadow(0 0 20px white);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+filter:drop-shadow(0 0 0px white);
+
+}
+
+}
+
+
+/* ---------- FLOATING HEARTS FIRST PAGE ---------- */
+
+
+.hearts span{
+
+position:absolute;
+
+bottom:-20px;
+
+font-size:30px;
+
+animation:float 8s infinite;
+
+}
+
+
+.hearts span:nth-child(1){
+
+left:10%;
+
+animation-delay:0s;
+
+}
+
+
+.hearts span:nth-child(2){
+
+left:30%;
+
+animation-delay:2s;
+
+}
+
+
+.hearts span:nth-child(3){
+
+left:50%;
+
+animation-delay:4s;
+
+}
+
+
+.hearts span:nth-child(4){
+
+left:70%;
+
+animation-delay:1s;
+
+}
+
+
+.hearts span:nth-child(5){
+
+left:90%;
+
+animation-delay:3s;
+
+}
+
+
+
+@keyframes float{
+
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+
+50%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:translateY(-100vh);
+
+opacity:0;
+
+}
+
+}
+
+
+
+/* ---------- SPARKLE RAIN ---------- */
+
+
+.sparkle{
+
+position:fixed;
+
+top:-20px;
+
+font-size:25px;
+
+z-index:999;
+
+animation:fall linear forwards;
+
+filter:drop-shadow(0 0 10px white);
+
+}
+
+
+
+@keyframes fall{
+
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:translateY(100vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+
+
+/* ---------- LETTER PAGE ---------- */
+
+
+.letterPage{
+
+background:
+
+linear-gradient(
+
+rgba(80,50,20,0.1),
+
+rgba(80,50,20,0.1)
+
+),
+
+#d8b07a;
+
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px 0;
+
+}
+
+
+/* ---------- HEARTS ON LETTER PAGE ---------- */
+
+
+.letterHearts span{
+
+position:fixed;
+
+bottom:-20px;
+
+font-size:30px;
+
+animation:letterHeartFloat 8s infinite;
+
+z-index:0;
+
+}
+
+
+
+.letterHearts span:nth-child(1){
+
+left:10%;
+
+}
+
+
+.letterHearts span:nth-child(2){
+
+left:30%;
+
+animation-delay:2s;
+
+}
+
+
+.letterHearts span:nth-child(3){
+
+left:60%;
+
+animation-delay:4s;
+
+}
+
+
+.letterHearts span:nth-child(4){
+
+left:80%;
+
+animation-delay:1s;
+
+}
+
+
+.letterHearts span:nth-child(5){
+
+left:45%;
+
+animation-delay:3s;
+
+}
+
+
+
+@keyframes letterHeartFloat{
+
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+
+50%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:translateY(-100vh);
+
+opacity:0;
+
+}
+
+}
+
+
+
+/* ---------- MAGIC SCROLL ---------- */
+
+
+.scroll{
+
+width:650px;
+
+max-width:90vw;
+
+overflow:visible;
+
+animation:scrollOpen 3s ease;
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+
+/* Wooden sticks */
+
+
+.stick{
+
+height:25px;
+
+width:620px;
+
+max-width:100%;
+
+background:#8b5a2b;
+
+border-radius:20px;
+
+box-shadow:
+
+0 5px 10px rgba(0,0,0,0.4);
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+
+/* Paper */
+
+
+.paper{
+
+background:
+
+radial-gradient(
+
+circle at top left,
+
+#fff8dc,
+
+#e8c98c
+
+);
+
+
+width:650px;
+
+max-width:90vw;
+
+padding:60px;
+
+box-sizing:border-box;
+
+box-shadow:
+
+inset 0 0 40px rgba(120,70,20,0.3),
+
+0 10px 30px rgba(0,0,0,0.4);
+
+
+font-family:"Segoe Print",cursive;
+
+transform-origin:top;
+
+animation:paperUnroll 3s ease;
+
+position:relative;
+
+}
+
+
+
+/* Old paper border */
+
+
+.paper::before{
+
+content:"";
+
+position:absolute;
+
+inset:15px;
+
+border:2px dashed rgba(120,70,20,0.25);
+
+}
+
+
+
+/* Letter text */
+
+
+.paper h2{
+
+color:#8b4a2f;
+
+font-size:32px;
+
+text-align:center;
+
+}
+
+
+
+.paper p{
+
+color:#5a3b2e;
+
+font-size:18px;
+
+line-height:2;
+
+}
+
+
+
+.paper h3{
+
+color:#8b4a2f;
+
+text-align:right;
+
+}
+
+
+
+/* Scroll Animation */
+
+
+@keyframes paperUnroll{
+
+
+0%{
+
+transform:scaleY(0);
+
+opacity:0;
+
+}
+
+
+50%{
+
+transform:scaleY(0.5);
+
+opacity:0.5;
+
+}
+
+
+100%{
+
+transform:scaleY(1);
+
+opacity:1;
+
+}
+
+}
+
+
+
+@keyframes scrollOpen{
+
+
+from{
+
+transform:scaleY(0.2);
+
+}
+
+
+to{
+
+transform:scaleY(1);
+
+}
+
+}
+/* Candlelight glow effect */
+
+.paper{
+
+animation:
+paperUnroll 3s ease,
+candleGlow 3s infinite alternate;
+
+}
+
+
+
+@keyframes candleGlow{
+
+
+0%{
+
+box-shadow:
+
+inset 0 0 40px rgba(120,70,20,0.3),
+0 0 20px rgba(255,200,100,0.4);
+
+}
+
+
+100%{
+
+box-shadow:
+
+inset 0 0 60px rgba(120,70,20,0.5),
+0 0 50px rgba(255,200,100,0.9);
+
+}
+
+
+}
+/* Secret message button */
+
+
+.secretBtn{
+
+font-size:18px;
+
+padding:12px 25px;
+
+border-radius:25px;
+
+background:#c94f7c;
+
+color:white;
+
+cursor:pointer;
+
+margin-top:20px;
+
+transition:0.5s;
+
+}
+
+
+.secretBtn:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+/* Hidden message */
+
+
+#secretMessage{
+
+display:none;
+
+margin-top:25px;
+
+font-size:18px;
+
+color:#8b4a2f;
+
+animation:secretOpen 1s;
+
+}
+
+
+
+@keyframes secretOpen{
+
+
+from{
+
+opacity:0;
+
+transform:scale(0.5);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+.paper::before{
+
+    pointer-events:none;
+
+}
+
+.secretBtn{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+#secretMessage{
+
+    display:none;
+
+    position:relative;
+
+    z-index:10;
+
+}
+/* ---------- FLOATING PHOTOS ---------- */
+
+
+.floatingPhotos{
+
+    position:relative;
+
+    width:100%;
+
+    height:350px;
+
+    z-index:5;
+
+}
+
+
+
+.floatingPhotos img{
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+
+    animation:photoFloat 8s infinite;
+
+    z-index:10;
+
+}
+
+
+
+/* Photo positions */
+
+
+.floatingPhotos img:nth-child(1){
+
+    left:5%;
+
+    top:80px;
+
+}
+
+
+
+.floatingPhotos img:nth-child(2){
+
+    right:5%;
+
+    top:120px;
+
+    animation-delay:2s;
+
+}
+
+
+
+.floatingPhotos img:nth-child(3){
+
+    left:25%;
+
+    top:20px;
+
+    animation-delay:4s;
+
+}
+
+
+
+.floatingPhotos img:nth-child(4){
+
+    right:25%;
+
+    top:40px;
+
+    animation-delay:1s;
+
+}
+
+
+
+.floatingPhotos img:nth-child(5){
+
+    left:45%;
+
+    top:180px;
+
+    animation-delay:3s;
+
+}
+
+
+
+
+@keyframes photoFloat{
+
+
+0%{
+
+transform:translateY(0) rotate(-5deg);
+
+}
+
+
+50%{
+
+transform:translateY(-40px) rotate(5deg);
+
+}
+
+
+100%{
+
+transform:translateY(0) rotate(-5deg);
+
+}
+
+}
